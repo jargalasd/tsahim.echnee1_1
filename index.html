@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //100 хүртэл санамсаргүй тоо авна.
+        // random too 60 байхад 47 дөхөж абйна. гэхдээ их байна. 15-ийн зайтай. 15 дотор дөхөж байна гэхдээ бага байна гэж хэлэх
+        // 150 оруулчвал 1-s 100 hoorond oruulna uu гэж хэвлэх
+        // Та үсэг биш тоо оруулна уу
+        let randomToo=Math.floor(Math.random()*100)+1;
+        while(true){
+            let too=prompt("Та 1-с 100 хооронд таах тоогоо оруулна уу...");
+            isNumber=true;
+            if(too>100){
+                alert("Та 1-с 100 хооронд тоо оруулна уу");
+            }else if(isNumber){
+                let i=0;
+                while(i<too.length){
+                    let char=too[i];
+                    if(char<'0'||char>'9'){
+                        isNumber=false;
+                        alert("Ta үсэг биш тоо оруулна уу");
+                        break;
+                    }
+                i++
+                }
+            if(too == randomToo){
+                alert("Та зөв таалаа: "+ randomToo);
+                break;
+            }else if(too> randomToo){
+                if(too-15<randomToo){
+                    alert("Таны оруулсан утга их бөгөөд дөхөж байна.")
+                }else{
+                alert("Таны оруулсан утга арай их байна.")}
+            }else if(too<randomToo){
+                if(too+15>randomToo){
+                    alert("Таны оруулсан утга бага бөгөөд дөхөж байна.")
+                }else{
+                alert("Таны оруулсан утга арай бага байна.")}
+                }
+            }
+        }
+
+    </script>
+</body>
+</html>
