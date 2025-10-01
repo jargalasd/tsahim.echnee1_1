@@ -28,6 +28,10 @@
                     }
                 i++
                 }
+            if(!isNumber){
+                alert("Та үсэг биш тоо орууна уу")
+                continue;
+            }
             if(too == randomToo){
                 alert("Та зөв таалаа: "+ randomToo);
                 break;
@@ -36,11 +40,11 @@
                     alert("Таны оруулсан утга их бөгөөд дөхөж байна.")
                 }else{
                 alert("Таны оруулсан утга арай их байна.")}
-            }else if(too<randomToo){
-                if(too+15>randomToo){
-                    alert("Таны оруулсан утга бага бөгөөд дөхөж байна.")
-                }else{
-                alert("Таны оруулсан утга арай бага байна.")
+            } else { // too < randomToo
+                if (too + 15 > randomToo) {
+                    alert("Таны оруулсан утга бага бөгөөд дөхөж байна.");
+                } else {
+                    alert("Таны оруулсан утга арай бага байна.");
                 }
             }
         }
